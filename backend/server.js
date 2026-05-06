@@ -1,14 +1,14 @@
 import express from 'express'
 import { createServer } from 'http'
-import initSocket from './socket'
+import initSocket from './socket.js'
 const app = express()
 
 const server = createServer(app)
 
-const io = initSocket(server)
+ initSocket(server)
 
 
 
-server.listen(8080, () => {
-    console.log(`Server is listening on PORT: 8080`)
+server.listen(3000, () => {
+    console.log(`Server is listening on PORT: 3000`)
 })
